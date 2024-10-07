@@ -13,15 +13,13 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-interface AudioPlayerProps {}
-
 interface Track {
   title: string;
   artist: string;
   src: string;
 }
 
-const AudioPlayer: React.FC<AudioPlayerProps> = () => {
+const AudioPlayer: React.FC = () => {
   const [tracks, setTracks] = useState<Track[]>([]);
   const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -63,7 +61,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = () => {
   };
 
   const handleTimeUpdate = () => {
-    if (audioRef.current) {
+    if (audioRef.current && audioRef.current.duration) {
       setCurrentTime(audioRef.current.currentTime);
       setProgress(
         (audioRef.current.currentTime / audioRef.current.duration) * 100
@@ -177,10 +175,11 @@ const AudioPlayer: React.FC<AudioPlayerProps> = () => {
         </Card>
       </div>
       {/* Footer section */}
-      <footer className="mt-4 text-sm text-gray-400">
+      <footer className="mt-4 text-sm text-gray-400 text-center">
         Created By <span className="text-yellow-300">{`Ismail Ahmed Shah`}</span>
       </footer>
     </div>
   );
-}  
+}
+
 export default AudioPlayer;
