@@ -1,3 +1,16 @@
+Day 30: Music Player
+Description: A simple music player for local files.
+
+Functionalities:
+
+Upload and play audio files
+Basic controls (play, pause, skip)
+Display current track and playback time
+
+Live on Vercel : https://audio-player-app-30-days-of-30-projects-next-js.vercel.app/
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
