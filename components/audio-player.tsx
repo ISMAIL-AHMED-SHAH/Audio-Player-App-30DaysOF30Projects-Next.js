@@ -99,7 +99,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-700 via-gray-900 to-gray-900 p-6">
-      <div className="w-full max-w-2xl p-8 rounded-lg shadow-2xl bg-gray-800 border border-gray-700 transition-all hover:border-yellow-500 hover:shadow-yellow-500/50">
+      <div className="w-full max-w-2xl p-8 rounded-lg shadow-2xl bg-gray-900 border border-gray-600 transition-all hover:border-yellow-500 hover:shadow-yellow-500/50">
         <div className="flex items-center justify-between text-yellow-300 mb-6">
           <h1 className="text-3xl font-extrabold animate-bounce">🎶 Audio Player</h1>
           <label className="flex items-center cursor-pointer text-lg hover:text-indigo-200 transition-colors">
